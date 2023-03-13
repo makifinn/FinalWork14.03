@@ -1,6 +1,6 @@
 ﻿bool IsWork = true;
 
-while(IsWork)
+while (IsWork)
 {
     Console.WriteLine("Программа принимает на вход массив указанного размера и на выходе создаёт массив содержащий все элементы первого массива меньше 3х символов");
     Console.WriteLine();
@@ -12,15 +12,26 @@ while(IsWork)
         switch (i)
         {
             case 1:
-            {
-                Task_1();
-
-                void Task_1()
                 {
-                    
+                    Task_1();
+
+                    void Task_1()
+                    {
+                        int ReadInt(string argument)
+                        {
+                            Console.Write($"{argument}");
+                            int number;
+
+                            while (!int.TryParse(Console.ReadLine(), out number))
+                            {
+                                Console.WriteLine("вы ввели не число");
+                            }
+
+                            return number;
+                        }
+                    }
+                    break;
                 }
-                break;
-            }
 
             case -1: IsWork = false; break;
         }
