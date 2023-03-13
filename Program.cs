@@ -17,58 +17,97 @@ while (IsWork)
 
                     void Task_1()
                     {
-                        int ReadInt(string argument)
+                        Console.WriteLine("Если хотите создать массив самостоятельно, введите 1");
+                        Console.WriteLine("Если хотите использовать заготовленный массив, введите 2");
+
+                        if (int.TryParse(Console.ReadLine(), out int j))
                         {
-                            Console.Write($"{argument}");
-                            int number;
-
-                            while (!int.TryParse(Console.ReadLine(), out number))
+                            switch (j)
                             {
-                                Console.WriteLine("вы ввели не число");
+                                case 1:
+                                    {
+                                        Console.WriteLine();
+                                        int size = ReadInt("Укажите размер массива (размер не может быть меньше 1): ");
+
+                                        while (size <= 0)
+                                        {
+                                            size = ReadInt("Введите число больше 0: ");
+                                        }
+
+                                        Console.WriteLine();
+                                        string[] firstArray = CreateNewArray(size);
+                                        Console.WriteLine();
+                                        Console.Write("Получился массив: ");
+                                        Console.WriteLine(String.Join(", ", firstArray));
+                                        Console.WriteLine();
+                                        string[] secondArray = ConvertArray(firstArray);
+                                        Console.Write("Преобразованный массив: ");
+                                        Console.WriteLine(String.Join(", ", secondArray));
+                                        Console.WriteLine();
+
+                                        int ReadInt(string argument)
+                                        {
+                                            Console.Write($"{argument}");
+                                            int number;
+
+                                            while (!int.TryParse(Console.ReadLine(), out number))
+                                            {
+                                                Console.WriteLine("Вы ввели не число");
+                                            }
+
+                                            return number;
+                                        }
+
+                                        string[] CreateNewArray(int size)
+                                        {
+                                            string[] newArray = new string[size];
+
+                                            for (int i = 0; i < newArray.GetLength(0); i++)
+                                            {
+                                                Console.Write("Введите значение: ");
+                                                newArray[i] = Console.ReadLine();
+                                            }
+
+                                            return newArray;
+                                        }
+
+                                        string[] ConvertArray(string[] array)
+                                        {
+                                            int newArraySize = 0;
+
+                                            for (int i = 0; i < array.GetLength(0); i++)
+                                            {
+                                                if (array[i].Length <= 3)
+                                                {
+                                                    newArraySize++;
+                                                }
+                                            }
+
+                                            string[] newArray = new string[newArraySize];
+
+                                            int j = 0;
+
+                                            for (int i = 0; i < array.GetLength(0); i++)
+                                            {
+                                                if (array[i].Length <= 3)
+                                                {
+                                                    newArray[j] = array[i];
+                                                    j++;
+                                                }
+                                            }
+
+                                            return newArray;
+                                        }
+                                        break;
+                                    }
+                                case 2:
+                                    {
+                                        break;
+                                    }
                             }
-
-                            return number;
-                        }
-
-                        string[] CreateNewArray(int size)
-                        {
-                            string[] newArray = new string[size];
-
-                            for (int i = 0; i < newArray.GetLength(0); i++)
-                            {
-                                Console.Write("введите значение: ");
-                                newArray[i] = Console.ReadLine();
-                            }
-
-                            return newArray;
-                        }
-
-                        string[] ConvertArray(string[] array)
-                        {
-                            int newArraySize = 0;
-                            for (int i = 0; i < array.GetLength(0); i++)
-                            {
-                                if (array[i].Length <= 3)
-                                {
-                                    newArraySize++;
-                                }
-                            }
-
-                            string[] newArray = new string[newArraySize];
-
-                            int j = 0;
-
-                            for (int i = 0; i < array.GetLength(0); i++)
-                            {
-                                if (array[i].Length <= 3)
-                                {
-                                    newArray[j] = array[i];
-                                    j++;
-                                }
-                            }
-                            return newArray;
                         }
                     }
+
                     break;
                 }
 

@@ -1,0 +1,15 @@
+C:\Users\maki\Desktop\Final Work\bin\Debug\net6.0\Final Work.exe
+C:\Users\maki\Desktop\Final Work\bin\Debug\net6.0\Final Work.deps.json
+C:\Users\maki\Desktop\Final Work\bin\Debug\net6.0\Final Work.runtimeconfig.json
+C:\Users\maki\Desktop\Final Work\bin\Debug\net6.0\Final Work.dll
+C:\Users\maki\Desktop\Final Work\bin\Debug\net6.0\Final Work.pdb
+C:\Users\maki\Desktop\Final Work\obj\Debug\net6.0\Final Work.csproj.AssemblyReference.cache
+C:\Users\maki\Desktop\Final Work\obj\Debug\net6.0\Final Work.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maki\Desktop\Final Work\obj\Debug\net6.0\Final Work.AssemblyInfoInputs.cache
+C:\Users\maki\Desktop\Final Work\obj\Debug\net6.0\Final Work.AssemblyInfo.cs
+C:\Users\maki\Desktop\Final Work\obj\Debug\net6.0\Final Work.csproj.CoreCompileInputs.cache
+C:\Users\maki\Desktop\Final Work\obj\Debug\net6.0\Final Work.dll
+C:\Users\maki\Desktop\Final Work\obj\Debug\net6.0\refint\Final Work.dll
+C:\Users\maki\Desktop\Final Work\obj\Debug\net6.0\Final Work.pdb
+C:\Users\maki\Desktop\Final Work\obj\Debug\net6.0\Final Work.genruntimeconfig.cache
+C:\Users\maki\Desktop\Final Work\obj\Debug\net6.0\ref\Final Work.dll
