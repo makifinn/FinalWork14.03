@@ -42,6 +42,32 @@ while (IsWork)
 
                             return newArray;
                         }
+
+                        string[] ConvertedArray(string[] array)
+                        {
+                            int newArraySize = 0;
+                            for (int i = 0; i < array.GetLength(0); i++)
+                            {
+                                if (array[i].Length <= 3)
+                                {
+                                    newArraySize++;
+                                }
+                            }
+
+                            string[] newArray = new string[newArraySize];
+
+                            int j = 0;
+
+                            for (int i = 0; i < array.GetLength(0); i++)
+                            {
+                                if (array[i].Length <= 3)
+                                {
+                                    newArray[j] = array[i];
+                                    j++;
+                                }
+                            }
+                            return newArray;
+                        }
                     }
                     break;
                 }
