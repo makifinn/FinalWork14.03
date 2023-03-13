@@ -30,7 +30,7 @@ while (IsWork)
                             return number;
                         }
 
-                        string[] StartedArray(int size)
+                        string[] CreateNewArray(int size)
                         {
                             string[] newArray = new string[size];
 
@@ -43,7 +43,7 @@ while (IsWork)
                             return newArray;
                         }
 
-                        string[] ConvertedArray(string[] array)
+                        string[] ConvertArray(string[] array)
                         {
                             int newArraySize = 0;
                             for (int i = 0; i < array.GetLength(0); i++)
