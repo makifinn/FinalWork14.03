@@ -98,10 +98,50 @@ while (IsWork)
 
                                             return newArray;
                                         }
+
                                         break;
                                     }
                                 case 2:
                                     {
+                                        string[] array = new string[6]{"qwer", "123", ":-P", "-12", "12qw", "9842"};
+
+                                        Console.WriteLine();
+                                        Console.Write("Заготовленный массив: ");
+                                        Console.WriteLine(String.Join(", ", array));
+                                        Console.WriteLine();
+                                        string[] secondArray = ConvertArray(array);
+                                        Console.Write("Преобразованный массив: ");
+                                        Console.WriteLine(String.Join(", ", secondArray));
+                                        Console.WriteLine();
+
+                                        string[] ConvertArray(string[] array)
+                                        {
+                                            int newArraySize = 0;
+
+                                            for (int i = 0; i < array.GetLength(0); i++)
+                                            {
+                                                if (array[i].Length <= 3)
+                                                {
+                                                    newArraySize++;
+                                                }
+                                            }
+
+                                            string[] newArray = new string[newArraySize];
+
+                                            int j = 0;
+
+                                            for (int i = 0; i < array.GetLength(0); i++)
+                                            {
+                                                if (array[i].Length <= 3)
+                                                {
+                                                    newArray[j] = array[i];
+                                                    j++;
+                                                }
+                                            }
+
+                                            return newArray;
+                                        }
+
                                         break;
                                     }
                             }
