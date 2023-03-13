@@ -29,6 +29,19 @@ while (IsWork)
 
                             return number;
                         }
+
+                        string[] StartedArray(int size)
+                        {
+                            string[] newArray = new string[size];
+
+                            for (int i = 0; i < newArray.GetLength(0); i++)
+                            {
+                                Console.Write("введите значение: ");
+                                newArray[i] = Console.ReadLine();
+                            }
+
+                            return newArray;
+                        }
                     }
                     break;
                 }
