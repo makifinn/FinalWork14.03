@@ -26,4 +26,4 @@
 	2. Проверка что число больше "0" (иначе у массива не будет размера, а значит массива не существует).
 
 ## Блок-схема алгоритма ConvertArray
-![block-scheme](Final%20Work.png)
+![block-scheme](/images/Final%20Work.png)
